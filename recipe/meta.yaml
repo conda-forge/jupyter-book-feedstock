@@ -1,13 +1,13 @@
 {% set name = "jupyter-book" %}
-{% set version = "0.8.2" %}
+{% set version = "0.10.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 77da2c5714494d0a1eed494542f1a717a7addbb0dfa30b1f7292f7a4caf0fb0c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 518bf94d23e9c9709c7511fa2698fb774c482cd29a11237aa573b42e2018240d
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
     - jb = jupyter_book.commands:main
     - jupyter-book = jupyter_book.commands:main
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -54,10 +54,10 @@ test:
     - pip
 
 about:
-  home: "https://executablebooks.org/"
+  home: https://executablebooks.org/
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: "Jupyter Book: Create an online book with Jupyter Notebooks"
+  summary: 'Jupyter Book: Create an online book with Jupyter Notebooks'
   dev_url: https://github.com/executablebooks/jupyter-book
   doc_url: https://jupyterbook.org
 
