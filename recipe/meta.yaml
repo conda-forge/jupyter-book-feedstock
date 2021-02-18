@@ -2,7 +2,7 @@
 {% set version = "0.10.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -21,25 +21,27 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools
   run:
     - click
     - docutils >=0.15
     - jsonschema
-    - myst-nb >=0.10.1,<0.11
+    - jupytext >=1.8.0,<1.9
+    - linkify-it-py >=1.0.1,<1.1
+    - myst-nb >=0.11.1,<0.12
     - nbconvert <6
-    - nbformat <6
+    - nbformat
+    - nested-lookup >=0.2.21,<0.3
     - python >=3.6
     - pyyaml
     - setuptools
     - sphinx >=2,<4
     - sphinx-comments
     - sphinx-copybutton
-    - sphinx-panels >=0.5.0,<0.6
+    - sphinx-panels >=0.5.2,<0.6
     - sphinx-thebe >=0.0.6
-    - sphinx-book-theme >=0.0.36
+    - sphinx-book-theme >=0.0.39
     - sphinx-togglebutton
-    - sphinxcontrib-bibtex <2
+    - sphinxcontrib-bibtex >=2.1.0,<2.2
 
 test:
   imports:
@@ -47,9 +49,9 @@ test:
     - jupyter_book.commands
     - jupyter_book.directive
   commands:
+    - pip check
     - jb --help
     - jupyter-book --help
-    - pip check
   requires:
     - pip
 
