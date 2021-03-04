@@ -1,5 +1,5 @@
 {% set name = "jupyter-book" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 518bf94d23e9c9709c7511fa2698fb774c482cd29a11237aa573b42e2018240d
+  sha256: c9149e16ba69cfc8e9449c323de37bc7e09c0505da948876f3c4e58a6b94f816
 
 build:
   number: 0
@@ -25,9 +25,9 @@ requirements:
     - click
     - docutils >=0.15
     - jsonschema
-    - jupytext >=1.8.0,<1.9
+    - jupytext >=1.8.0,<1.11
     - linkify-it-py >=1.0.1,<1.1
-    - myst-nb >=0.11.1,<0.12
+    - myst-nb >=0.12.1,<0.13
     - nbconvert <6
     - nbformat
     - nested-lookup >=0.2.21,<0.3
