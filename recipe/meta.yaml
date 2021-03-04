@@ -1,13 +1,13 @@
 {% set name = "jupyter-book" %}
-{% set version = "0.8.2" %}
+{% set version = "0.10.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 77da2c5714494d0a1eed494542f1a717a7addbb0dfa30b1f7292f7a4caf0fb0c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c9149e16ba69cfc8e9449c323de37bc7e09c0505da948876f3c4e58a6b94f816
 
 build:
   number: 0
@@ -15,31 +15,33 @@ build:
     - jb = jupyter_book.commands:main
     - jupyter-book = jupyter_book.commands:main
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools
   run:
     - click
     - docutils >=0.15
     - jsonschema
-    - myst-nb >=0.10.1,<0.11
+    - jupytext >=1.8.0,<1.11
+    - linkify-it-py >=1.0.1,<1.1
+    - myst-nb >=0.12.0,<0.13
     - nbconvert <6
-    - nbformat <6
+    - nbformat
+    - nested-lookup >=0.2.21,<0.3
     - python >=3.6
     - pyyaml
     - setuptools
     - sphinx >=2,<4
     - sphinx-comments
     - sphinx-copybutton
-    - sphinx-panels >=0.5.0,<0.6
+    - sphinx-panels >=0.5.2,<0.6
     - sphinx-thebe >=0.0.6
-    - sphinx-book-theme >=0.0.36
+    - sphinx-book-theme >=0.0.39
     - sphinx-togglebutton
-    - sphinxcontrib-bibtex <2
+    - sphinxcontrib-bibtex >=2.1.0,<2.2
 
 test:
   imports:
@@ -47,17 +49,17 @@ test:
     - jupyter_book.commands
     - jupyter_book.directive
   commands:
+    - pip check
     - jb --help
     - jupyter-book --help
-    - pip check
   requires:
     - pip
 
 about:
-  home: "https://executablebooks.org/"
+  home: https://executablebooks.org/
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: "Jupyter Book: Create an online book with Jupyter Notebooks"
+  summary: 'Jupyter Book: Create an online book with Jupyter Notebooks'
   dev_url: https://github.com/executablebooks/jupyter-book
   doc_url: https://jupyterbook.org
 
