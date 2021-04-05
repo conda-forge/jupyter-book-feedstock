@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
   run:
     - click
-    - docutils >=0.15
+    - docutils >=0.15,<0.17
     - jsonschema
     - jupytext >=1.8.0,<1.11
     - linkify-it-py >=1.0.1,<1.1
@@ -42,6 +42,9 @@ requirements:
     - sphinx-book-theme >=0.0.39
     - sphinx-togglebutton
     - sphinxcontrib-bibtex >=2.1.0,<2.2
+    - jupyterbook-latex >=0.2.0,<0.3
+    # TODO: remove after https://github.com/conda-forge/jupyter-cache-feedstock/pull/5
+    - sqlalchemy >=1.3.12,<1.4
 
 test:
   imports:
