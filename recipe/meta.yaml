@@ -1,5 +1,5 @@
 {% set name = "jupyter-book" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c9149e16ba69cfc8e9449c323de37bc7e09c0505da948876f3c4e58a6b94f816
+  sha256: 91edefc9757e46c86aa782e7c2cc5f6b755eb67eee672f5a7b0f5d9200c64f03
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
   run:
     - click
-    - docutils >=0.15
+    - docutils >=0.15,<0.17
     - jsonschema
     - jupytext >=1.8.0,<1.11
     - linkify-it-py >=1.0.1,<1.1
@@ -42,6 +42,9 @@ requirements:
     - sphinx-book-theme >=0.0.39
     - sphinx-togglebutton
     - sphinxcontrib-bibtex >=2.1.0,<2.2
+    - jupyterbook-latex >=0.2.0,<0.3
+    # TODO: remove after https://github.com/conda-forge/jupyter-cache-feedstock/pull/5
+    - sqlalchemy >=1.3.12,<1.4
 
 test:
   imports:
