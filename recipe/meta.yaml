@@ -23,25 +23,25 @@ requirements:
     - python >=3.6
   run:
     - click
-    - docutils>=0.15,<0.17
+    - docutils >=0.15,<0.17
     - jsonschema
-    - jupyterbook-latex~=0.3.1
-    - jupytext>=1.8,<1.11
-    - linkify-it-py~=1.0.1
-    - myst-nb~=0.12.0
-    - nbconvert<6
+    - jupyterbook-latex ~=0.3.1
+    - jupytext >=1.8,<1.11
+    - linkify-it-py ~=1.0.1
+    - myst-nb ~=0.12.0
+    - nbconvert <6
     - nbformat
     - pyyaml
-    - sphinx>=2,<4
+    - sphinx >=2,<4
     - sphinx-comments
     - sphinx-copybutton
-    - sphinx-external-toc~=0.2.0
-    - sphinx-panels~=0.5.2
-    - sphinx-thebe~=0.0.8
-    - sphinx_book_theme~=0.1.0
+    - sphinx-external-toc ~=0.2.0
+    - sphinx-panels ~=0.5.2
+    - sphinx-thebe ~=0.0.8
+    - sphinx_book_theme ~=0.1.0
     - sphinx_togglebutton
-    - sphinxcontrib-bibtex~=2.2.0
-    - importlib_metadata;python_version < "3.7"
+    - sphinxcontrib-bibtex ~=2.2.0
+    - importlib_metadata;python_version <"3.7",>=3.6
 
 test:
   imports:
