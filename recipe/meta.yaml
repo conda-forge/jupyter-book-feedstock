@@ -25,7 +25,7 @@ requirements:
     - click
     - docutils >=0.15,<0.17
     - jsonschema
-    - sphinx-jupyterbook-latex ~=0.3.1
+    - jupyterbook-latex ~=0.3.1
     - jupytext >=1.8,<1.11
     - linkify-it-py ~=1.0.1
     - myst-nb ~=0.12.0
