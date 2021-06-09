@@ -41,7 +41,7 @@ requirements:
     - sphinx_book_theme ~=0.1.0
     - sphinx_togglebutton
     - sphinxcontrib-bibtex ~=2.2.0
-    - importlib_metadata;python_version <"3.7",>=3.6
+    - importlib_metadata;python_version >=3.6
 
 test:
   imports:
