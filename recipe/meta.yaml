@@ -29,13 +29,15 @@ requirements:
     - jupytext >=1.8,<1.11
     - linkify-it-py ~=1.0.1
     - myst-nb ~=0.12.0
+    - nbconvert<6
+    - nbformat
     - python >=3.6
     - pyyaml
     - sphinx >=2,<4
     - sphinx-book-theme ~=0.1.0
     - sphinx-comments
     - sphinx-copybutton
-    - sphinx-external-toc ~=0.2.1
+    - sphinx-external-toc ~=0.2.0
     - sphinx-panels ~=0.5.2
     - sphinx-thebe ~=0.0.8
     - sphinx-togglebutton
