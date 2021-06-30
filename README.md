@@ -1,13 +1,14 @@
 About jupyter-book
 ==================
 
-Home: https://executablebooks.org/
+Home: https://executablebooks.org
 
 Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-book-feedstock/blob/master/LICENSE.txt)
 
 Summary: Jupyter Book: Create an online book with Jupyter Notebooks
+
 
 Development: https://github.com/executablebooks/jupyter-book
 
@@ -40,6 +41,7 @@ Installing `jupyter-book` from the `conda-forge` channel can be achieved by addi
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `jupyter-book` can be installed with:
