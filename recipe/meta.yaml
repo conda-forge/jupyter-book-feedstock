@@ -25,7 +25,6 @@ requirements:
     - docutils >=0.15,<0.17
     - importlib-metadata
     - jsonschema
-    - jupyterbook-latex ~=0.3.1
     - jupytext >=1.8,<1.11
     - linkify-it-py ~=1.0.1
     - myst-nb ~=0.12.0
@@ -42,6 +41,8 @@ requirements:
     - sphinx-thebe ~=0.0.8
     - sphinx-togglebutton
     - sphinxcontrib-bibtex ~=2.2.0
+    - sphinx-jupyterbook-latex~=0.4.2
+    - sphinx-multitoc-numbering~=0.1.3
 
 test:
   imports:
@@ -69,3 +70,4 @@ extra:
     - moorepants
     - bollwyvl
     - AakashGfude
+    - mmcky
