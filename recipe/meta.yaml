@@ -49,7 +49,7 @@ test:
     - pip check
     - jb --version
     - jb --help
-    - jb --version
+    - jupyter-book --version
     - jupyter-book --help
   requires:
     - pip
