@@ -21,33 +21,35 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - click
-    - docutils >=0.15,<0.17
+    - click >=7.1,<8
+    - docutils >=0.15,<0.18
     - importlib-metadata
-    - jsonschema
-    - jupytext >=1.8,<1.11
-    - linkify-it-py ~=1.0.1
-    - myst-nb ~=0.12.0
+    - jsonschema <4
+    - jupytext >=1.11.2,<1.12
+    - linkify-it-py >=1.0.1,<1.1
+    - myst-nb >=0.12.0,<0.13
     - python >=3.6
     - pyyaml
-    - sphinx >=2,<4
-    - sphinx-book-theme ~=0.1.3
+    - sphinx >=3,<5
+    - sphinx-book-theme >=0.1.4,<0.2
     - sphinx-comments
     - sphinx-copybutton
-    - sphinx-external-toc ~=0.2.1
-    - sphinx-panels ~=0.5.2
-    - sphinx-thebe ~=0.0.10
+    - sphinx-external-toc >=0.2.3,<0.3
+    - sphinx-panels >=0.6.0,<0.7
+    - sphinx-thebe >=0.0.10,<0.1
     - sphinx-togglebutton
-    - sphinxcontrib-bibtex ~=2.2.0
-    - sphinx-jupyterbook-latex ~=0.4.2
-    - sphinx-multitoc-numbering ~=0.1.3
+    - sphinxcontrib-bibtex >=2.2.0,<2.3
+    - sphinx-jupyterbook-latex >=0.4.3,<0.5
+    - sphinx-multitoc-numbering >=0.1.3,<0.2
 
 test:
   imports:
     - jupyter_book
   commands:
     - pip check
+    - jb --version
     - jb --help
+    - jb --version
     - jupyter-book --help
   requires:
     - pip
