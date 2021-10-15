@@ -122,6 +122,5 @@ Feedstock Maintainers
 
 * [@AakashGfude](https://github.com/AakashGfude/)
 * [@bollwyvl](https://github.com/bollwyvl/)
-* [@chrisjsewell](https://github.com/chrisjsewell/)
 * [@moorepants](https://github.com/moorepants/)
 
