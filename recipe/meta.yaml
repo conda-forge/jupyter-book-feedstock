@@ -28,6 +28,7 @@ requirements:
     - jupytext >=1.11.2,<1.12
     - linkify-it-py >=1.0.1,<1.1
     - myst-nb >=0.13.1,<0.14
+    - python >=3.6
     - pyyaml
     - sphinx-book-theme >=0.1.4,<0.2
     - sphinx-togglebutton
