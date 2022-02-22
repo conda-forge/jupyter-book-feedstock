@@ -1,4 +1,4 @@
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 package:
   name: jupyter-book
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter-book/jupyter-book-{{ version }}.tar.gz
-  sha256: 674d40c1e18c3f3fb02514a9f60898bbdcb9939c72d3f795db02fd4f1d1d3f70
+  sha256: 63bd18d0b05855e066498d688c57e03e47441507d07816a0cb12099d233205e8
 
 build:
   number: 0
