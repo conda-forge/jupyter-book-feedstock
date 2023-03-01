@@ -1,11 +1,11 @@
-About jupyter-book
-==================
+About jupyter-book-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-book-feedstock/blob/main/LICENSE.txt)
 
 Home: https://executablebooks.org
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-book-feedstock/blob/main/LICENSE.txt)
 
 Summary: Jupyter Book: Create an online book with Jupyter Notebooks
 
@@ -151,7 +151,4 @@ Feedstock Maintainers
 * [@AakashGfude](https://github.com/AakashGfude/)
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@moorepants](https://github.com/moorepants/)
-
-
-<!-- dummy commit to enable rerendering -->
 
