@@ -15,7 +15,7 @@ build:
   entry_points:
     - jb = jupyter_book.cli.main:main
     - jupyter-book = jupyter_book.cli.main:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
