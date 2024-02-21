@@ -1,4 +1,4 @@
-{% set version = "0.15.1" %}
+{% set version = "1.0.0" %}
 {% set min_python = "python >=3.9" %}
 
 package:
@@ -8,14 +8,16 @@ package:
 source:
   url: https://pypi.io/packages/source/j/jupyter-book/jupyter_book-{{ version }}.tar.gz
   sha256: 539c5d0493546200d9de27bd4b5f77eaea03115f8937f825d4ff82b3801a987e
+  patches:
+    - 0000-use-py312-entry-point-group.patch
 
 build:
   number: 0
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - jb = jupyter_book.cli.main:main
     - jupyter-book = jupyter_book.cli.main:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -42,6 +44,8 @@ requirements:
     - sphinx-thebe >=0.3,<1
     - sphinx-togglebutton
     - sphinxcontrib-bibtex >=2.5.0,<3
+    # dep added by patch
+    - importlib-metadata >=4.8.3
 
 test:
   imports:
