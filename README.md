@@ -149,6 +149,6 @@ Feedstock Maintainers
 =====================
 
 * [@AakashGfude](https://github.com/AakashGfude/)
+* [@agoose77](https://github.com/agoose77/)
 * [@bollwyvl](https://github.com/bollwyvl/)
-* [@moorepants](https://github.com/moorepants/)
 
