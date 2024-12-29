@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter-book/jupyter_book-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyter-book/jupyter_book-{{ version }}.tar.gz
   sha256: f05788a76f4d284de9887fa816f4a99a4f16cc5f7c0fd5a56074a3d03bfc3e50
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
@@ -55,6 +55,7 @@ test:
     - jupyter-book --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://executablebooks.org
