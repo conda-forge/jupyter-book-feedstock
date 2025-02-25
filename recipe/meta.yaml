@@ -19,9 +19,9 @@ build:
 
 requirements:
   host:
-    - flit-core >=3.5,<4
-    - pip
     - python {{ python_min }}
+    - pip
+    - hatchling >1.10.0
   run:
     - click >=7.1,<9
     - jinja2
