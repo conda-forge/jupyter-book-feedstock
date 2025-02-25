@@ -3,16 +3,15 @@ About jupyter-book-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-book-feedstock/blob/main/LICENSE.txt)
 
-Home: https://executablebooks.org
+Home: https://executablebooks.org/
 
 Package license: BSD-3-Clause
 
 Summary: Jupyter Book: Create an online book with Jupyter Notebooks
 
-
 Development: https://github.com/executablebooks/jupyter-book
 
-Documentation: https://jupyterbook.org
+Documentation: https://jupyterbook.org/
 
 Current build status
 ====================
