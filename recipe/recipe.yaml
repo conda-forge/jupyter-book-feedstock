@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 1.0.4.post0
+  version: "1.0.4.post1"
 
 package:
   name: jupyter-book
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-book/jupyter_book-${{ version }}.tar.gz
-  sha256: a555211b053418dc911ca8d6baf4a283097e2f36bda7cde47299ce92342c631e
+  sha256: 2fe92c49ff74840edc0a86bb034eafdd0f645fca6e48266be367ce4d808b9601
 
 build:
   number: 0
