@@ -4,6 +4,7 @@ schema_version: 1
 context:
   version: "2.0.0"
   python_check_max: "3.14"
+  nodejs_min: "20"
 
 package:
   name: jupyter-book
@@ -12,6 +13,8 @@ package:
 source:
   url: https://pypi.org/packages/source/j/jupyter-book/jupyter_book-${{ version }}.tar.gz
   sha256: d8cd883fdf02de376f92118aa81329c1e481ca02872369665adaed7dfcabfa99
+  patches:
+    - 0000-no-nodeenv.patch
 
 build:
   number: 0
@@ -25,15 +28,19 @@ build:
 requirements:
   host:
     - hatch-deps-selector
+    - hatch-jupyter-builder
     - hatch-nodejs-version
     - hatchling
+    - nodejs ${{ nodejs_min }}.*
     - pip
     - python ${{ python_min }}.*
   run:
     - ipykernel
     - jupyter_core
     - jupyter_server
-    - python >=${{ pyton_min }}
+    - nodejs >=${{ nodejs_min }}
+    - platformdirs >=4.2.2
+    - python >=${{ python_min }}
 
 tests:
   - python:
@@ -41,13 +48,21 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - ${{ python_check_min }}.*
+        - ${{ python_check_max }}.*
   - requirements:
       run:
+        - nodejs ${{ nodejs_min }}.*
         - python ${{ python_min }}.*
     script:
       - jupyter-book --version
       - jupyter-book --help
+      - >-
+          jupyter-book --version | python -c
+          "import sys, importlib.metadata; v = {
+            '${{ version }}',
+            sys.stdin.read().strip().replace('v', ''),
+            importlib.metadata.version('jupyter-book')
+          }; print(v); assert len(v) == 1"
 
 about:
   license: BSD-3-Clause
