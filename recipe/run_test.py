@@ -7,10 +7,18 @@ from importlib.metadata import version
 
 def do(args: list[str], expect_stdout: str = "") -> int:
     print(">>>", *args, flush=True)
-    out = subprocess.check_output(args, encoding="utf-8")
-    if expect_stdout:
-        assert expect_stdout in out
-    return 0
+    proc = subprocess.Popen(
+        args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8"
+    )
+    stdout, stderr = proc.communicate()
+    print("STDOUT")
+    print(stdout)
+    print("STDERR")
+    print(stderr)
+    if expect_stdout and expect_stdout not in stdout:
+        print("!!! missing", expect_stdout)
+        return 2
+    return proc.returncode
 
 
 def check_versions() -> int:
