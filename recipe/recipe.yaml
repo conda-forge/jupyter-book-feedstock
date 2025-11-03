@@ -54,15 +54,7 @@ tests:
         - nodejs ${{ nodejs_min }}.*
         - python ${{ python_min }}.*
     script:
-      - jupyter-book --version
-      - jupyter-book --help
-      - >-
-          jupyter-book --version | python -c
-          "import sys, importlib.metadata; v = {
-            '${{ version }}',
-            sys.stdin.read().strip().replace('v', ''),
-            importlib.metadata.version('jupyter-book')
-          }; print(v); assert len(v) == 1"
+      file: run_test.py
 
 about:
   license: BSD-3-Clause
