@@ -2,6 +2,7 @@
 schema_version: 1
 
 context:
+  name: jupyter-book
   version: "2.0.2"
   python_check_max: "3.14"
   nodejs_min: "20"
@@ -11,16 +12,16 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/j/jupyter-book/jupyter_book-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/jupyter_book-${{ version }}.tar.gz
   sha256: 36e1428ad85a70e500513793edff3be83c4f036f80eb67bb909180914f50094b
-  patches:
-    - 0000-no-nodeenv.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    env:
+      JUPYTER_BOOK_PACKAGE_VARIANT: conda-forge
+      content: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - jupyter-book = jupyter_book.__main__:main
