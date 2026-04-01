@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.1.2"
+  version: "2.1.4"
   python_check_max: "3.14"
   nodejs_min: "20"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-book/jupyter_book-${{ version }}.tar.gz
-  sha256: 94bb8e63ef191e88cb6e7ab8a1ac66c7dc354ac228de1f558e5beb0381d38f8a
+  sha256: 2a888f698b0f1e316269c59cc9d24849013d5617d6901a643a98407547cb4b6c
   patches:
     - 0000-no-nodeenv.patch
 
@@ -59,8 +59,9 @@ tests:
 about:
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: An opinionated distribution of mystmd
-  homepage: https://github.com/jupyter-book/jupyter-book
+  summary: Create computational narratives that are reusable, reproducible, and interactive.
+  homepage: https://pypi.org/project/jupyter-book 
+  repository: https://github.com/jupyter-book/jupyter-book
   documentation: https://jupyterbook.org/stable/get-started/
 
 extra:

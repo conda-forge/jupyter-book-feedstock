@@ -3,11 +3,13 @@ About jupyter-book-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-book-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jupyter-book/jupyter-book
+Home: https://pypi.org/project/jupyter-book
 
 Package license: BSD-3-Clause
 
-Summary: An opinionated distribution of mystmd
+Summary: Create computational narratives that are reusable, reproducible, and interactive.
+
+Development: https://github.com/jupyter-book/jupyter-book
 
 Documentation: https://jupyterbook.org/stable/get-started/
 
@@ -15,11 +17,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11955&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter-book-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
