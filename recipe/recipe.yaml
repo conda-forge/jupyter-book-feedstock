@@ -59,8 +59,9 @@ tests:
 about:
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: An opinionated distribution of mystmd
-  homepage: https://github.com/jupyter-book/jupyter-book
+  summary: Create computational narratives that are reusable, reproducible, and interactive.
+  homepage: https://pypi.org/project/jupyter-book 
+  repository: https://github.com/jupyter-book/jupyter-book
   documentation: https://jupyterbook.org/stable/get-started/
 
 extra:
