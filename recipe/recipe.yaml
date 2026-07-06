@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.1.5"
+  version: "2.1.6"
   python_check_max: "3.14"
   nodejs_min: "20"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-book/jupyter_book-${{ version }}.tar.gz
-  sha256: 6a43a1991365b5896fa789e9df1687b9b37f91d06d9eb7cc94fc628ac27e662e
+  sha256: fb52cf7f7056a8475aebefa78376801e45cc3daa010a48ac3ea089a5f10dd17c
   patches:
     - 0000-no-nodeenv.patch
 
